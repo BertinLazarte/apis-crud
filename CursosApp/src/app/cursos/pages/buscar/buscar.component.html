@@ -1,0 +1,28 @@
+<div fxLayout="column">
+    <div>
+        <h1>Buscardor de Cursos</h1>
+        {{termino}}
+        <mat-divider></mat-divider>
+    </div>
+    <div>
+        <h3>Buscador</h3>
+        <mat-form-field>
+            <input type="text" placeholder="¿Qué quieres aprender?" aria-label="Number" matInput
+            [(ngModel)]="termino" [matAutocomplete]="auto" (input)="buscando()">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="opcionSeleccionada( $event )">
+                <mat-option *ngFor="let curso of cursos" [value]="curso">
+                    {{curso.materia}}
+                </mat-option>
+                <mat-option value="" *ngIf="cursos.length === 0 && termino.trim().length > 0">
+                    No se encontró el curso: {{termino}}
+                </mat-option>
+            </mat-autocomplete>
+
+        </mat-form-field>
+
+    </div>
+</div>
+
+<div>
+    <pre> {{cursoSeleccionado | json}}</pre>
+</div>

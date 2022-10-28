@@ -1,0 +1,83 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "usuario": "Bertin Lazarte",
+      "email": "i2219676@continental.edu.pe"
+    }
+  ],
+  "gsuite": [
+    {
+      "id": "co-javascript",
+      "materia": "JavaScript Avanzado",
+      "tecnologias": "JS jQuery Angular NodeJs",
+      "docente": "Victor Robin",
+      "nivel": "Basico - Avanzado",
+      "idioma": "Español"
+    },
+    {
+      "id": "co-php",
+      "materia": "PHP Moderno",
+      "tecnologias": "PHP SQL POO MVC Laravel",
+      "docente": "Carlos España",
+      "nivel": "Basico - Intermedio",
+      "idioma": "Español - Ingles"
+    },
+    {
+      "id": "co-desarrolloweb",
+      "materia": "Desarrollo Web",
+      "tecnologias": "HTML5 CSS3 JS AJAX PHP MySQL",
+      "docente": "Pablo de la Torre",
+      "nivel": "Basico - Avanzado",
+      "idioma": "Español"
+    },
+    {
+      "id": "co-laravel",
+      "materia": "Laravel 9",
+      "tecnologias": "PHP 8 y MVC",
+      "docente": "Abel Shicay",
+      "nivel": "Intermedio - Avanzado",
+      "idioma": "Español"
+    },
+    {
+      "id": "co-sqlserver",
+      "materia": "SQL Server",
+      "tecnologias": "SQL MySQL HeidiSQL Workbench",
+      "docente": "Ivan Ruiz",
+      "nivel": "Basico - Avanzado",
+      "idioma": "Español - Ingles"
+    },
+    {
+      "id": "co-mongodb",
+      "materia": "MongoDB",
+      "tecnologias": "NoSQL CRUD ABM Schemas",
+      "docente": "Sebastian Chirou",
+      "nivel": "Basico - Intermedio",
+      "idioma": "Ingles"
+    },
+    {
+      "id": "co-reactnative",
+      "materia": "React Native",
+      "tecnologias": "TypeScript CLI GraphQL Firebase",
+      "docente": "Fernando Herrera",
+      "nivel": "Intermedio - Avanzado",
+      "idioma": "Español"
+    },
+    {
+      "id": "co-nodejs",
+      "materia": "Node JS",
+      "tecnologias": "Rest API's ORMs EJS Pug",
+      "docente": "Leifer De la Torre",
+      "nivel": "Avanzado",
+      "idioma": "Español"
+    },
+    {
+      "id": "co-nest",
+      "materia": "Nest Backend",
+      "tecnologias": "REST TypeScript Websockets TypeOrm",
+      "docente": "Nicolas Robles",
+      "nivel": "Basico - Intermedio",
+      "idioma": "Ingles"
+    }
+  ]
+}

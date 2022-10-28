@@ -1,0 +1,30 @@
+<mat-grid-list cols="1" *ngIf="!curso; else divCurso">
+    <mat-grid-tile>
+        <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divCurso>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px">
+        <div fxFlex="50">
+            <h1>{{ curso.materia }} <small>- {{curso.tecnologias}}</small></h1>
+            <mat-divider></mat-divider>
+            <br>
+            <img [src]="curso | imagen">
+        </div>
+        <div fxFlex="50">
+            <h1>{{ curso.docente}}</h1>
+            <mat-divider></mat-divider>
+            <mat-list>
+                <mat-list-item> {{ curso.nivel}}</mat-list-item>
+                <mat-list-item> {{ curso.idioma}}</mat-list-item>
+                <mat-list-item> {{ curso.tecnologias}}</mat-list-item>
+                <mat-list-item> {{ curso.docente}}</mat-list-item>
+            </mat-list>
+            <br>
+            <button mat-button color="warn" (click)="regresar()">Regresar</button>
+            <button mat-raised-button color="accent">Aplicar</button>
+        </div>
+    </div>
+    <!-- {{ curso | json }} -->
+</ng-template>

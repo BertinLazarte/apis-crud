@@ -1,0 +1,64 @@
+<h1>Nuevo Curso OnLine <small>{{curso.materia}}</small> </h1>
+
+<div fxLayout="row" fxLayout="40px" fxLayout.xs="column">
+
+    <div fxFlex="50" fxLayout="column">
+
+        <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column">
+            <mat-form-field fxFlex="100" fxLayout.xs="column">
+                <mat-label>Materia de Aprendizaje</mat-label>
+                <input matInput type="text" required [(ngModel)]="curso.materia">
+            </mat-form-field>
+    
+            <mat-form-field fxFlex="100">
+                <mat-label>Docente de Materia</mat-label>
+                <input matInput type="text" required [(ngModel)]="curso.docente">
+            </mat-form-field>
+        </div>
+
+        <mat-form-field>
+            <mat-label>Nivel de Aprendizaje</mat-label>
+            <input matInput type="text" required [(ngModel)]="curso.nivel">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Tecnologías</mat-label>
+            <input matInput type="text" required [(ngModel)]="curso.tecnologias">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Idioma</mat-label>
+            <mat-select [(ngModel)]="curso.idioma" required>
+                <mat-option *ngFor="let idioma of language" [value]="idioma.id">
+                    {{idioma.desc}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Foto Url</mat-label>
+            <input matInput type="url" required [(ngModel)]="curso.alt_img">
+        </mat-form-field>
+
+        <br>
+        <div fxLayout>
+            <button mat-raised-button color="warn" (click)="guardar()">
+                <mat-icon>save</mat-icon>
+                Guardar
+            </button>
+
+            <span class="spacer"></span>
+
+            <div>
+                <button mat-raised-button color="accent" *ngIf="curso.id" (click)="borrarCurso()">
+                    <mat-icon>remove</mat-icon>
+                    Borrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div fxFlex="50">
+        <img [src]="curso | imagen" alt="#">
+    </div>
+</div>

@@ -1,0 +1,22 @@
+
+<mat-card>
+    <mat-card-header><h2>{{curso.materia}}</h2></mat-card-header>
+    
+    <mat-card-subtitle>{{curso.tecnologias}}</mat-card-subtitle>
+
+    <img mat-card-image [src]="curso | imagen" alt="">
+
+    <mat-card-content>
+        <h3>{{curso.docente}}</h3>
+        <p>
+            <strong>Nivel de Logro: </strong> {{curso.nivel}}
+            <br>
+            <strong>Idioma: </strong>{{curso.idioma}}
+        </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button mat-button color="accent" [routerLink]="['/cursos', curso.id]">Leer más</button>
+        <button mat-raised-button color="info" [routerLink]="['/cursos/editar', curso.id]">Editar</button>
+    </mat-card-actions>
+</mat-card>
